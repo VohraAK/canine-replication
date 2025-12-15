@@ -77,11 +77,14 @@ LoraConfig(
 - Exact Match: ~50-55% (multilingual average on primary task)
 - F1 Score: ~55-60%
 
-**Our Results (CANINE-C with LoRA):**
-- Exact Match: **64.20%** ✅ (+9-14 points vs. mBERT)
-- F1 Score: **64.20%** ✅ (+4-9 points vs. mBERT)
+**Official CANINE Paper Baseline (CANINE-C)**
+- F1 Score: ~66% (multilingual average on primary task)
 
-**Key Finding:** Our lightweight LoRA-based CANINE significantly outperforms the paper's mBERT baseline despite training on only 2,000 examples and using <0.3% trainable parameters.
+**Our Results (CANINE-C with LoRA):**
+- Exact Match: **64.20%** 
+- F1 Score: **64.20%**
+
+**Key Finding:** Our lightweight LoRA-based CANINE significantly outperforms the TYDIQA paper's mBERT baseline and CANINE paper's full training baseline, despite training on only 2,000 examples and using <0.3% trainable parameters.
 
 ## Hindsight: Secondary Task Consideration
 
@@ -105,7 +108,7 @@ Given our parallel work on UQA (Urdu QA) using the **Gold Passage** configuratio
 
 Successfully reproduced and exceeded CANINE baseline results on TyDiQA primary task using efficient LoRA fine-tuning:
 
-✅ **64.20% EM/F1** vs. ~55% mBERT baseline  
+✅ **64.20% EM/F1**
 ✅ **0.26% trainable parameters** (345K vs. 132M total)  
 ✅ **Robust to no-answer questions** (handles ~50% unanswerable rate)  
 ✅ **Character-level precision** for multilingual span extraction
