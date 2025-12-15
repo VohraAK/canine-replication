@@ -26,6 +26,9 @@ The primary task requires predicting **minimal answers** - short, precise answer
 
 ## Training Setup
 
+    We took the same elements from Google's own trainer scripts into our trainer, adding LoRA adapters and reducing training samples. The implementation might be cruder.
+
+
 ### Model Configuration
 
 - **Base Model:** `google/canine-c` (132M parameters)
